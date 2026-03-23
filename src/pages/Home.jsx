@@ -550,7 +550,7 @@ function HomeFoundation() {
         {/* Program Cards and Why Section */}
         <div className="flex flex-col lg:flex-row gap-8 md:gap-8 mb-8 md:mb-12 md:justify-center mx-auto md:mx-0">
           {/* Program Cards */}
-          <div className="flex justify-center md::flex">
+          <div className="flex justify-center md:flex">
             <div className="grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-6">
               {/* CPA Card */}
               <div

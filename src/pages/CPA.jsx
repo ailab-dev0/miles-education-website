@@ -223,12 +223,12 @@ const faqData = [
 ];
 
 const instructors = [
-  { instructorImageURL: "https://ik.imagekit.io/mileseducation/miles_website/accounting/cma-visit/inst-1.webp", instructorName: "Varun Jain", instructorProfession: "CPA, CMA", instructorURLKey: "17mbNFmgG4k" },
-  { instructorImageURL: "https://ik.imagekit.io/mileseducation/miles_website/accounting/cma-visit/inst-2.webp", instructorName: "Simran Grover", instructorProfession: "CPA", instructorURLKey: "gjA7jbsuXxY" },
-  { instructorImageURL: "https://ik.imagekit.io/mileseducation/miles_website/accounting/cma-visit/inst-3.webp", instructorName: "Bijesh Nair", instructorProfession: "CMA", instructorURLKey: "ZehDqp_tFSA" },
-  { instructorImageURL: "https://ik.imagekit.io/mileseducation/miles_website/accounting/cma-visit/inst-4.webp", instructorName: "Kalyani Sinha", instructorProfession: "CPA, CMA", instructorURLKey: "AYRdXcD7-QI" },
-  { instructorImageURL: "https://ik.imagekit.io/mileseducation/miles_website/accounting/cma-visit/inst-5.webp", instructorName: "Mohan Kumar", instructorProfession: "CPA", instructorURLKey: "0TdxuPBNNa8" },
-  { instructorImageURL: "https://ik.imagekit.io/mileseducation/miles_website/accounting/cma-visit/inst-6.webp", instructorName: "Srinivas", instructorProfession: "CMA", instructorURLKey: "QqFAuZzvnDs" },
+  { instructorImageURL: "https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/jason_cherubini.png?tr=f-webp", instructorName: "Jason Cherubini", instructorProfession: "Academic Entrepreneur", instructorURLKey: "17mbNFmgG4k" },
+  { instructorImageURL: "https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/jamar_cobb_dennard.png?tr=f-webp", instructorName: "Jamar Cobb-Dennard", instructorProfession: "CPA", instructorURLKey: "gjA7jbsuXxY" },
+  { instructorImageURL: "https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/gary_cokins.png?tr=f-webp", instructorName: "Gary Cokins", instructorProfession: "CMA", instructorURLKey: "ZehDqp_tFSA" },
+  { instructorImageURL: "https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/mfon_akpan.png?tr=f-webp", instructorName: "Mfon Akpan", instructorProfession: "CPA, CMA", instructorURLKey: "AYRdXcD7-QI" },
+  { instructorImageURL: "https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/floran_syler_woods.png?tr=f-webp", instructorName: "Floran Syler Woods", instructorProfession: "CPA", instructorURLKey: "0TdxuPBNNa8" },
+  { instructorImageURL: "https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/mick_caroll.png?tr=f-webp", instructorName: "Mick Carroll", instructorProfession: "CMA", instructorURLKey: "QqFAuZzvnDs" },
 ];
 
 /* ───────── reusable YouTube popup ───────── */
@@ -561,12 +561,12 @@ function LeadingGlobal() {
 /* ───────── CAIRA Section ───────── */
 
 const CAIRA_IMAGES = [
-  "https://ik.imagekit.io/mileseducation/miles_website/caira/new/card-1.webp",
-  "https://ik.imagekit.io/mileseducation/miles_website/caira/new/card-2.webp",
-  "https://ik.imagekit.io/mileseducation/miles_website/caira/new/card-3.webp",
-  "https://ik.imagekit.io/mileseducation/miles_website/caira/new/card-4.webp",
-  "https://ik.imagekit.io/mileseducation/miles_website/caira/new/card-5.webp",
-  "https://ik.imagekit.io/mileseducation/miles_website/caira/new/card-6.webp",
+  "https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/new/card-1.webp",
+  "https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/new/card-2.webp",
+  "https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/new/card-3.webp",
+  "https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/new/card-4.webp",
+  "https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/new/card-5.webp",
+  "https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/new/card-6.webp",
 ];
 
 function CairaSection() {
@@ -1250,7 +1250,7 @@ function MilesOneAppDownload() {
         style={{ contain: "layout style paint" }}
       >
         <img
-          src="https://ik.imagekit.io/mileseducation/miles_website/cma/new/download_app_dek_bg.webp"
+          src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cma-visit/new/download_app_dek_bg.webp"
           alt="Download App Desktop Background"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
@@ -1263,7 +1263,7 @@ function MilesOneAppDownload() {
         style={{ contain: "layout style paint" }}
       >
         <img
-          src="https://ik.imagekit.io/mileseducation/miles_website/cma/new/download_app_mob_bg.webp?tr=w-480,h-310,q-80"
+          src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cma-visit/new/download_app_mob_bg.webp?tr=w-480,h-310,q-80"
           alt="Download App Mobile Background"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
