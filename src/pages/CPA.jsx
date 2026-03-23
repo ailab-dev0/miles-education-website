@@ -357,7 +357,7 @@ function MainPageBanner() {
   return (
     <div className="w-full bg-center relative" style={{ minHeight: "580px", contain: "layout style" }}>
       <div className="hidden md:block absolute inset-0 top-7" style={{ contain: "layout style paint" }}>
-        <img src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/herosectionBG.webp?tr=w-1280,q-60,f-webp" alt="" width={1280} height={580} className="absolute inset-0 w-full h-full object-cover z-0" fetchPriority="high" />
+        <img src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/herosectionBG.webp" alt="" width={1280} height={580} className="absolute inset-0 w-full h-full object-cover z-0" fetchPriority="high" />
       </div>
       <div className="md:hidden absolute inset-0 top-7" style={{ contain: "layout style paint" }}>
         <img src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/cpa-new-bg-mobile.webp?tr=w-375,q-50,f-webp" alt="" width={420} height={740} className="absolute inset-0 w-full h-full object-cover z-0" fetchPriority="high" />
