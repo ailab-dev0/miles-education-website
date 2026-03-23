@@ -1,7 +1,24 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+
+/* Lazy section — only renders when scrolled into view (reduces TBT) */
+function LazySection({ children, minHeight = "400px" }) {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      { rootMargin: "200px" }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+  return <div ref={ref} style={{ minHeight: visible ? undefined : minHeight }}>{visible ? children : null}</div>;
+}
 
 /* ================================================================
    DATA
@@ -1506,23 +1523,23 @@ export default function Home() {
 
       <HomeCaira />
 
-      <HomeFoundation />
+      <LazySection minHeight="600px"><HomeFoundation /></LazySection>
 
-      <HomeIndiaCareers />
+      <LazySection minHeight="400px"><HomeIndiaCareers /></LazySection>
 
-      <HomeUsPathway />
+      <LazySection minHeight="600px"><HomeUsPathway /></LazySection>
 
-      <UniversityIntegration />
+      <LazySection minHeight="300px"><UniversityIntegration /></LazySection>
 
-      <UsEcosystem />
+      <LazySection minHeight="400px"><UsEcosystem /></LazySection>
 
-      <BeyondAccounting />
+      <LazySection minHeight="400px"><BeyondAccounting /></LazySection>
 
-      <MilesFoundationSection />
+      <LazySection minHeight="300px"><MilesFoundationSection /></LazySection>
 
-      <MilesEcosystem />
+      <LazySection minHeight="400px"><MilesEcosystem /></LazySection>
 
-      <Footer />
+      <LazySection minHeight="300px"><Footer /></LazySection>
     </main>
   );
 }
