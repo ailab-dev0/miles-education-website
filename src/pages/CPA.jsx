@@ -560,31 +560,117 @@ function LeadingGlobal() {
 
 /* ───────── CAIRA Section ───────── */
 
+const CAIRA_IMAGES = [
+  "https://ik.imagekit.io/mileseducation/miles_website/caira/new/card-1.webp",
+  "https://ik.imagekit.io/mileseducation/miles_website/caira/new/card-2.webp",
+  "https://ik.imagekit.io/mileseducation/miles_website/caira/new/card-3.webp",
+  "https://ik.imagekit.io/mileseducation/miles_website/caira/new/card-4.webp",
+  "https://ik.imagekit.io/mileseducation/miles_website/caira/new/card-5.webp",
+  "https://ik.imagekit.io/mileseducation/miles_website/caira/new/card-6.webp",
+];
+
 function CairaSection() {
   return (
-    <div className="w-full bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16 flex flex-col gap-6">
-        <div>
-          <h2 className="text-[20px] md:text-[32px] font-semibold tracking-[-1.76px] text-[#061A2F]">
-            CAIRA - Certified AI-Ready{" "}
-            <span className="font-semibold leading-[94%] bg-[linear-gradient(92deg,#39f_6.8%,#ffba08_99.51%)] bg-clip-text text-transparent pr-1 !tracking-[-1.76px]">Accountant</span>
-          </h2>
-          <h3 className="text-sm md:text-lg font-medium bg-gradient-to-r from-[#39f] to-[#061a2f] bg-clip-text text-transparent inline-block">
-            NASBA-approved | Credly-verified | Built for accountants
-          </h3>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="border border-[#39F] rounded-[8px] lg:rounded-2xl p-4 flex flex-col gap-3">
-            <h3 className="text-[#3399FF] text-base md:text-[18px] font-bold leading-tight">Level 1 - AI Foundations</h3>
-            <p className="text-sm text-[#061A2F]">FREE for all Miles CPA/CMA students. Learn ChatGPT, Copilot, Power BI for accounting workflows.</p>
-          </div>
-          <div className="border border-[#39F] rounded-[8px] lg:rounded-2xl p-4 flex flex-col gap-3">
-            <h3 className="text-[#3399FF] text-base md:text-[18px] font-bold leading-tight">Level 2 - Applied AI</h3>
-            <p className="text-sm text-[#061A2F]">Advanced AI across Audit, Tax, FP&A, and Controllership functions.</p>
-          </div>
-          <div className="border border-[#39F] rounded-[8px] lg:rounded-2xl p-4 flex flex-col gap-3">
-            <h3 className="text-[#3399FF] text-base md:text-[18px] font-bold leading-tight">Level 3 - AI Leadership</h3>
-            <p className="text-sm text-[#061A2F]">AI Strategy & Leadership for CFOs and Finance Leaders.</p>
+    <div
+      className="w-full relative isolate bg-[#061A2F]"
+      style={{ minHeight: "420px", contain: "layout" }}
+    >
+      {/* Desktop Background */}
+      <div className="absolute inset-0 hidden md:block">
+        <img
+          src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/new/caira-new-bg-desk.webp"
+          alt="BG Image"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      {/* Mobile Background */}
+      <div className="absolute inset-0 md:hidden">
+        <img
+          src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/new/caira-new-bg-mob.webp"
+          alt="BG Image"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div className="max-w-[1340px] lg:px-7 md:px-4 mx-auto relative px-0 lg:py-10 z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:justify-between md:items-center gap-5 relative md:py-6 py-10">
+          <div className="flex flex-col items-center md:items-start gap-4 sm:gap-6 lg:pt-0">
+            <div className="md:text-left text-center w-full">
+              <h2 className="text-lg leading-[1.2] font-medium text-white md:text-[32px] md:leading-[1.4] md:pt-4">
+                FREE: CAIRA - Level 1 <br className="md:hidden block" />
+                (Certified <br className="md:block hidden" /> AI-Ready
+                Accountant)
+              </h2>
+              <p className="text-white text-sm md:mt-4 mt-2">
+                Learn AI from Global Accounting Innovators
+              </p>
+
+              {/* Mobile Cards Grid */}
+              <div className="md:hidden block w-full relative py-2 mt-5">
+                <div className="overflow-x-auto scrollbar-hidden">
+                  <div className="flex gap-2 px-4">
+                    {CAIRA_IMAGES.map((imageSrc, index) => (
+                      <div
+                        key={`caira-mob-${index}`}
+                        className="flex-[0_0_33.33%] min-w-0"
+                      >
+                        <div className="relative cursor-pointer h-auto w-full">
+                          <article
+                            className="shrink-0 overflow-hidden rounded-[4px] bg-[#0b0b0b] transition-transform hover:scale-105 w-full h-[200px] sm:h-[280px]"
+                          >
+                            <div className="relative w-full h-full">
+                              <img
+                                src={imageSrc}
+                                alt={`AI Accountant program showcase ${index + 1}`}
+                                className="absolute inset-0 w-full h-full object-cover transition-transform"
+                                loading={index < 3 ? "eager" : "lazy"}
+                              />
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Desktop Cards Grid */}
+              <div className="hidden md:block relative py-2 mt-5">
+                <div className="overflow-x-auto scrollbar-hidden">
+                  <div className="flex gap-3">
+                    {CAIRA_IMAGES.map((imageSrc, index) => (
+                      <div
+                        key={`caira-desk-${index}`}
+                        className="flex-shrink-0"
+                      >
+                        <article
+                          className="shrink-0 overflow-hidden rounded-[4px] bg-[#0b0b0b] transition-transform hover:scale-105 w-[154px] h-[275px]"
+                        >
+                          <div className="relative w-full h-full">
+                            <img
+                              src={imageSrc}
+                              alt={`AI Accountant program showcase ${index + 1}`}
+                              className="absolute inset-0 w-full h-full object-cover transition-transform"
+                              loading={index < 3 ? "eager" : "lazy"}
+                            />
+                          </div>
+                        </article>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="md:mt-14 mt-6 px-4 md:px-0">
+                <a
+                  href="/caira"
+                  className="inline-flex items-center gap-3 rounded-full bg-[#fff] px-6 py-2 text-sm font-semibold text-black transition-transform hover:scale-[1.02] active:scale-[0.99]"
+                >
+                  Apply Now
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1065,6 +1151,247 @@ function AccountingRoadMap() {
   );
 }
 
+/* ───────── Blog Hub Section ───────── */
+
+const blogCardsData = [
+  { id: 1, title: "CPA Salary in US: Complete Guide", slug: "cpa-salary-in-us" },
+  { id: 2, title: "Is US CPA Equivalent to Indian CA?", slug: "is-a-cpa-in-the-usa-equivalent-to-an-indian-ca" },
+  { id: 3, title: "CPA Salary Breakdown in India", slug: "cpa-salary-breakdown-in-india-from-freshers-to-top-earners" },
+  { id: 4, title: "CPA Exam Fees: How Much Does CPA Cost?", slug: "cpa-exam-fees-how-much-does-the-cpa-cost" },
+];
+
+const BLOG_FALLBACK_IMAGE = "https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/blog_fallback_author_image.avif";
+
+function BlogHubSection() {
+  return (
+    <div className="bg-[#fff] w-full">
+      <div className="main_container mx-auto py-10 lg:py-16 flex flex-col gap-6 lg:gap-10 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div>
+          <h2 className="text-black text-xl md:text-3xl font-semibold tracking-[-1.28px] text-[32px] leading-[1.2]">
+            The Miles{" "}
+            <span className="visit_txt pr-1 !tracking-[-1.28px] bg-gradient-to-r from-[#39F] to-[#061A2F] bg-clip-text text-transparent">Blog Hub</span>
+          </h2>
+          <p className="text-sm md:text-lg font-medium tracking-[-0.54px] text-[18px] leading-[1.3]">
+            <span className="bg-gradient-to-r from-[#39F] to-[#061A2F] bg-clip-text text-transparent">
+              More from us
+            </span>
+          </p>
+        </div>
+        <div>
+          {/* Mobile: horizontal scroll */}
+          <div className="flex overflow-scroll scrollbar-hidden gap-4 md:hidden">
+            {blogCardsData.map((blogData) => (
+              <Link
+                to={`/blog/accounting/${blogData.slug}`}
+                key={blogData.id}
+                className="w-[240px] h-[216px] min-w-[240px] min-h-[216px] rounded-2xl flex-shrink-0"
+              >
+                <div className="relative w-[240px] h-[216px] min-w-[240px] min-h-[216px] rounded-2xl">
+                  <img
+                    src={BLOG_FALLBACK_IMAGE}
+                    alt={`${blogData.title} - Miles Blog`}
+                    width={240}
+                    height={216}
+                    className="rounded-xl object-cover w-full h-full"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0C1F33]/60 via-[#0C1F33]/40 to-transparent rounded-xl w-full h-full" />
+                  <div className="absolute bottom-3 left-0 right-0 pl-2 pr-4">
+                    <h3 className="text-white font-bold tracking-[-0.408px] leading-snug line-clamp-2 text-[14px]">
+                      {blogData.title}
+                    </h3>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Desktop: 4-col grid */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {blogCardsData.map((blogData) => (
+              <Link
+                to={`/blog/accounting/${blogData.slug}`}
+                key={`desktop-${blogData.id}`}
+                className="w-full max-w-[300px] h-auto mx-auto rounded-2xl"
+              >
+                <div className="relative w-full h-[267px] rounded-2xl">
+                  <img
+                    src={BLOG_FALLBACK_IMAGE}
+                    alt={`${blogData.title} - Miles Blog`}
+                    width={300}
+                    height={270}
+                    className="rounded-xl object-cover w-full h-full"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0C1F33]/60 via-[#0C1F33]/40 to-transparent rounded-xl w-full h-full" />
+                  <div className="absolute bottom-3 left-0 right-0 pl-2 pr-4">
+                    <h3 className="text-white font-bold tracking-[-0.408px] leading-snug line-clamp-2 text-[16px] lg:text-[18px]">
+                      {blogData.title}
+                    </h3>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ───────── MilesOne App Download Section ───────── */
+
+function MilesOneAppDownload() {
+  return (
+    <div className="w-full bg-center relative isolate md:py-8 py-10">
+      {/* DESKTOP BG */}
+      <div
+        className="hidden md:block absolute inset-0 -z-10 pointer-events-none select-none"
+        style={{ contain: "layout style paint" }}
+      >
+        <img
+          src="https://ik.imagekit.io/mileseducation/miles_website/cma/new/download_app_dek_bg.webp"
+          alt="Download App Desktop Background"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+
+      {/* MOBILE BG */}
+      <div
+        className="md:hidden absolute inset-0 -z-10 pointer-events-none select-none"
+        style={{ contain: "layout style paint" }}
+      >
+        <img
+          src="https://ik.imagekit.io/mileseducation/miles_website/cma/new/download_app_mob_bg.webp?tr=w-480,h-310,q-80"
+          alt="Download App Mobile Background"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+
+      {/* CONTENT */}
+      <div className="max-w-[1340px] mx-auto relative px-4 md:px-6 lg:px-7 py-6 lg:py-16">
+        <div className="flex flex-col md:items-center items-start md:text-center text-left md:space-y-8">
+          <p className="text-base md:text-2xl text-white">
+            Download the
+          </p>
+
+          <h2 className="text-3xl md:text-[84px] font-bold text-white tracking-tight">
+            Miles One App
+          </h2>
+
+          <p className="text-base md:text-2xl text-white font-semibold">
+            to be an AI-Ready Accountant
+          </p>
+        </div>
+
+        <div className="flex md:justify-center justify-start gap-4 md:mt-10 mt-4">
+          {/* Desktop: show store buttons + QR code */}
+          <div className="hidden md:flex flex-row gap-4 justify-center">
+            <div className="flex flex-col justify-center gap-3">
+              <a
+                href="https://apps.apple.com/us/app/miles-us-pathway/id6504799221"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#061A2F] p-2 flex rounded-lg gap-2 pr-4"
+              >
+                <img
+                  src="https://ik.imagekit.io/mileseducation/miles_website/home/app-store.webp"
+                  alt="App Store"
+                  width={32}
+                  height={32}
+                  className="shrink-0"
+                />
+                <div>
+                  <p className="text-[10px] leading-3 text-white font-medium">
+                    Download on the
+                  </p>
+                  <p className="text-base text-white font-medium">App Store</p>
+                </div>
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.miles.one"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#061A2F] p-2 flex rounded-lg gap-2 pr-4"
+              >
+                <img
+                  src="https://ik.imagekit.io/mileseducation/miles_website/home/play-store.webp"
+                  alt="Play Store"
+                  width={32}
+                  height={32}
+                  className="shrink-0"
+                />
+                <div>
+                  <p className="text-[10px] leading-3 text-white font-medium">
+                    GET IT ON
+                  </p>
+                  <p className="text-base text-white font-medium">Google Play</p>
+                </div>
+              </a>
+            </div>
+            <div className="text-center">
+              <img
+                src="https://ik.imagekit.io/mileseducation/miles_website/home/milesone_qr_code.webp"
+                alt="QR Code"
+                width={100}
+                height={100}
+                className="min-w-[100px] min-h-[100px] inline-block"
+              />
+              <p className="pt-1 text-xs text-[#fff]">Scan to download</p>
+            </div>
+          </div>
+
+          {/* Mobile: show store buttons without QR */}
+          <div className="flex md:hidden flex-row gap-3 justify-start">
+            <a
+              href="https://apps.apple.com/us/app/miles-us-pathway/id6504799221"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#061A2F] p-2 flex rounded-lg gap-2 pr-4"
+            >
+              <img
+                src="https://ik.imagekit.io/mileseducation/miles_website/home/app-store.webp"
+                alt="App Store"
+                width={32}
+                height={32}
+                className="shrink-0 w-6 h-6"
+              />
+              <div>
+                <p className="text-[8px] leading-3 text-white font-medium">
+                  Download on the
+                </p>
+                <p className="text-[10px] text-white font-medium">App Store</p>
+              </div>
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.miles.one"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#061A2F] p-2 flex rounded-lg gap-2 pr-4"
+            >
+              <img
+                src="https://ik.imagekit.io/mileseducation/miles_website/home/play-store.webp"
+                alt="Play Store"
+                width={32}
+                height={32}
+                className="shrink-0 w-6 h-6"
+              />
+              <div>
+                <p className="text-[8px] leading-3 text-white font-medium">
+                  GET IT ON
+                </p>
+                <p className="text-[10px] text-white font-medium">Google Play</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ───────── FAQ Section ───────── */
 
 function FAQSection() {
@@ -1164,7 +1491,13 @@ export default function CPA() {
       {/* 11. Accounting Roadmap / Webinar CTA */}
       <AccountingRoadMap />
 
-      {/* 12. FAQ */}
+      {/* 12. Blog Hub */}
+      <BlogHubSection />
+
+      {/* 13. MilesOne App Download */}
+      <MilesOneAppDownload />
+
+      {/* 14. FAQ */}
       <FAQSection />
 
       <Footer />

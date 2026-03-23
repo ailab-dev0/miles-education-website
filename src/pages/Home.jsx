@@ -247,7 +247,7 @@ function HomeBannerNew() {
       {/* Mobile Background — loaded lazily so text is LCP, not image */}
       <div className="md:hidden absolute inset-0 top-0">
         <img
-          src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp?tr=w-375,q-50,f-webp"
+          src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp"
           alt="Home Page Banner Mobile Background"
           width={420}
           height={740}
