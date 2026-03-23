@@ -111,14 +111,14 @@ function EventTicker() {
     <>
       {/* mobile */}
       <div
-        className="md:hidden block"
-        style={{ minHeight: "24px", contain: "layout style paint" }}
+        className="md:hidden block overflow-hidden"
+        style={{ height: "24px", contain: "layout style paint" }}
       >
-        <div className="rightTI w-full">
+        <div className="rightTI w-full" style={{ height: "24px" }}>
           <a href="/accounting/events/webinar">
             <p
               className="text-[#FFF] font-normal animated_text_mob"
-              style={{ lineHeight: "20px", minHeight: "20px" }}
+              style={{ lineHeight: "24px", height: "24px", overflow: "hidden" }}
             >
               <span className="font-bold">Become an AI-Ready CPA or CMA</span> |
               Free webinar with Varun Jain to know more about CAIRA + U.S.

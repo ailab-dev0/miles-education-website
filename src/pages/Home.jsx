@@ -1499,7 +1499,7 @@ bg-[linear-gradient(90deg,#3399FF_0.07%,#061A2F_62.39%)] bg-clip-text text-trans
    ================================================================ */
 export default function Home() {
   return (
-    <main className="bg-white w-full pt-[96px] md:pt-[96px]">
+    <main className="bg-white w-full">
       <Nav activePage="/" />
 
       <HomeBannerNew />

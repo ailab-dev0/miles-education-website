@@ -355,57 +355,34 @@ function MainPageBanner() {
   ];
 
   return (
-    <div className="w-full bg-center relative" style={{ minHeight: "580px", contain: "layout", contentVisibility: "auto", containIntrinsicSize: "auto 580px" }}>
+    <div className="w-full bg-center relative" style={{ minHeight: "580px", contain: "layout style" }}>
       <div className="hidden md:block absolute inset-0 top-7" style={{ contain: "layout style paint" }}>
-        <img
-          src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/herosectionBG.webp?tr=w-1280,h-580"
-          alt="CPA Hero Section Background"
-          width={1280}
-          height={580}
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          fetchPriority="high"
-        />
+        <img src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/herosectionBG.webp?tr=w-1280,h-580" alt="" width={1280} height={580} className="absolute inset-0 w-full h-full object-cover z-0" fetchPriority="high" />
       </div>
       <div className="md:hidden absolute inset-0 top-7" style={{ contain: "layout style paint" }}>
-        <img
-          src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/cpa-new-bg-mobile.webp?tr=w-375,h-740"
-          alt="CPA Hero Section Background Mobile"
-          width={420}
-          height={740}
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          fetchPriority="high"
-        />
+        <img src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/cpa-new-bg-mobile.webp?tr=w-375,h-740" alt="" width={420} height={740} className="absolute inset-0 w-full h-full object-cover z-0" fetchPriority="high" />
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative px-5 lg:py-10">
-        <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-5 relative py-6">
-          <div className="flex flex-col items-center md:items-start gap-4 sm:gap-6 lg:pt-10 min-h-[200px] md:min-h-[280px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 lg:py-10">
+        <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-5 py-6" style={{ contain: "layout" }}>
+          <div className="flex flex-col items-center md:items-start gap-4 sm:gap-6 lg:pt-10">
             <div className="md:text-left text-center md:z-20">
               <h1 className="text-[#061A2F] text-2xl md:text-[44px] font-semibold leading-tight md:leading-[1.2] tracking-[-1.44px] text-center md:text-left">
                 Be an AI-Ready CPA in 2026
               </h1>
-              <span className="md:text-[36px] text-2xl font-semibold leading-normal tracking-[-1.44px] bg-[linear-gradient(88deg,_#39F_73.02%,_#FFB801_90.73%)] bg-clip-text text-transparent relative block min-h-[36px] md:min-h-[44px]">
+              <span className="md:text-[36px] text-2xl font-semibold leading-normal tracking-[-1.44px] bg-[linear-gradient(88deg,_#39F_73.02%,_#FFB801_90.73%)] bg-clip-text text-transparent relative block">
                 Earn 50L+ per annum
               </span>
             </div>
-            <ul className="mt-2 text-[#061A2F] font-medium text-base flex flex-col md:gap-2 gap-0 md:leading-[1.2] md:items-start md:text-left list-disc md:pl-5 pl-4" style={{ minHeight: "72px", contain: "layout" }}>
+            <ul className="mt-2 text-[#061A2F] font-medium text-base flex flex-col md:gap-2 gap-0 md:leading-[1.2] md:items-start md:text-left list-disc md:pl-5 pl-4">
               {bulletPoints.map((point, index) => (
                 <li key={index}>{point}</li>
               ))}
             </ul>
           </div>
-          <div className="hidden xl:block relative overflow-hidden md:z-10">
-            {/* Bubble images placeholder */}
-          </div>
+          <div className="hidden xl:block relative overflow-hidden md:z-10" />
           <div className="w-full relative flex items-center justify-center lg:justify-end z-[1] bottom-1 lg:pt-12">
             <div className="w-full max-w-[400px] p-4 border border-white rounded-2xl bg-gradient-to-b from-white/30 to-blue-400/30 shadow-[0px_0px_14px_0px_rgba(4,84,175,0.29)] backdrop-blur-[28px] relative">
-              <img
-                src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa-visit/starGroup.webp"
-                alt="star group"
-                width={34}
-                height={38}
-                className="absolute top-1 left-0"
-                loading="lazy"
-              />
+              <img src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa-visit/starGroup.webp" alt="" width={34} height={38} className="absolute top-1 left-0" loading="lazy" />
               <PlaceholderForm heading="Weekly Live Webinar with Varun Jain" buttonText="Request a call back" />
             </div>
           </div>
@@ -1151,7 +1128,7 @@ function FAQSection() {
 
 export default function CPA() {
   return (
-    <main className="bg-white w-full pt-[96px] md:pt-[96px]">
+    <main className="bg-white w-full">
       <Nav />
 
       {/* 1. Banner */}
