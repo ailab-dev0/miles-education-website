@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Preload hero images for LCP -->
-    <link rel="preload" as="image" href="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp" media="(min-width: 769px)" fetchpriority="high" />
-    <link rel="preload" as="image" href="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp" media="(max-width: 768px)" fetchpriority="high" />
+    <!-- Preload hero images for LCP — compressed for fast mobile load -->
+    <link rel="preload" as="image" href="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp?tr=w-1280,q-60,f-webp" media="(min-width: 769px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp?tr=w-375,q-50,f-webp" media="(max-width: 768px)" fetchpriority="high" />
 
     <!-- Non-blocking font loading -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" />
@@ -59,9 +59,9 @@
       <div class="shell-nav"></div>
       <div class="shell-hero">
         <picture>
-          <source media="(min-width: 769px)" srcset="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp" />
-          <source media="(max-width: 768px)" srcset="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp" />
-          <img class="shell-hero-bg" src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp" alt="" width="1280" height="580" fetchpriority="high" />
+          <source media="(min-width: 769px)" srcset="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp?tr=w-1280,q-60,f-webp" />
+          <source media="(max-width: 768px)" srcset="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp?tr=w-375,q-50,f-webp" />
+          <img class="shell-hero-bg" src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp?tr=w-375,q-50,f-webp" alt="" width="375" height="740" fetchpriority="high" />
         </picture>
         <div class="shell-hero-content">
           <h1>Making Accountants</h1>

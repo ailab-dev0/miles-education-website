@@ -357,10 +357,10 @@ function MainPageBanner() {
   return (
     <div className="w-full bg-center relative" style={{ minHeight: "580px", contain: "layout style" }}>
       <div className="hidden md:block absolute inset-0 top-7" style={{ contain: "layout style paint" }}>
-        <img src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/herosectionBG.webp?tr=w-1280,h-580" alt="" width={1280} height={580} className="absolute inset-0 w-full h-full object-cover z-0" fetchPriority="high" />
+        <img src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cpa/herosectionBG.webp?tr=w-1280,q-60,f-webp" alt="" width={1280} height={580} className="absolute inset-0 w-full h-full object-cover z-0" fetchPriority="high" />
       </div>
       <div className="md:hidden absolute inset-0 top-7" style={{ contain: "layout style paint" }}>
-        <img src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/cpa-new-bg-mobile.webp?tr=w-375,h-740" alt="" width={420} height={740} className="absolute inset-0 w-full h-full object-cover z-0" fetchPriority="high" />
+        <img src="https://ik.imagekit.io/mileseducation/miles_website/accounting/cma/cpa-new-bg-mobile.webp?tr=w-375,q-50,f-webp" alt="" width={420} height={740} className="absolute inset-0 w-full h-full object-cover z-0" fetchPriority="high" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 lg:py-10">
         <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-5 py-6" style={{ contain: "layout" }}>

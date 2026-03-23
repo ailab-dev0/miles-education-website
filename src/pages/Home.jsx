@@ -233,7 +233,7 @@ function HomeBannerNew() {
       {/* Desktop Background */}
       <div className="hidden md:block absolute inset-0 top-0 overflow-hidden">
         <img
-          src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp"
+          src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp?tr=w-1280,q-60,f-webp"
           alt="Home Page Banner Desktop Background"
           width={1280}
           height={580}
@@ -247,7 +247,7 @@ function HomeBannerNew() {
       {/* Mobile Background */}
       <div className="md:hidden absolute inset-0 top-0">
         <img
-          src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp"
+          src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp?tr=w-375,q-50,f-webp"
           alt="Home Page Banner Mobile Background"
           width={420}
           height={740}
