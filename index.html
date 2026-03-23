@@ -26,13 +26,16 @@
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#191919" />
 
-    <!-- Critical inline styles -->
+    <!-- Critical inline styles for instant rendering -->
     <style>
       *,*::before,*::after{box-sizing:border-box}
-      body{margin:0;font-family:'Work Sans',system-ui,sans-serif;background:#fff;overflow-x:hidden;color:#333}
+      body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:#fff;overflow-x:hidden;color:#333}
+      img{max-width:100%;height:auto;display:block}
+      a{text-decoration:none}
       #root{min-height:100vh}
       .visit_txt{background:linear-gradient(92deg,#39f 6.8%,#ffba08 99.51%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:600;line-height:94%;overflow:visible}
-      /* Skeleton shell — removed by React on mount */
+      .main_container{max-width:1340px;padding-left:1rem;padding-right:1rem;margin:0 auto}
+      /* Shell styles */
       .shell-ticker{background:#061A2F;height:24px;overflow:hidden}
       .shell-ticker p{color:#fff;font-size:12px;text-align:center;line-height:24px;margin:0;white-space:nowrap}
       .shell-nav{background:#191919;height:56px}
@@ -42,11 +45,32 @@
       .shell-hero .gold{display:block;font-size:34px;font-weight:600;color:#FFBA08;letter-spacing:1.8px}
       .shell-hero .desc{color:rgba(255,255,255,0.9);font-size:14px;margin-top:16px;line-height:1.5}
       .shell-hero .cta{display:inline-block;background:#FFBA08;color:#000;font-weight:700;padding:10px 24px;border-radius:50px;font-size:14px;margin-top:24px;text-decoration:none}
+      /* Above-fold nav/header critical styles */
+      .bg-\[\#191919\]{background:#191919}
+      .bg-\[\#061A2F\]{background:#061A2F}
+      .text-white{color:#fff}
+      .fixed{position:fixed}
+      .relative{position:relative}
+      .flex{display:flex}
+      .hidden{display:none}
+      .items-center{align-items:center}
+      .justify-between{justify-content:space-between}
+      .w-full{width:100%}
+      .z-\[999\]{z-index:999}
+      .overflow-hidden{overflow:hidden}
       @media(min-width:768px){
         .shell-hero h1{font-size:44px}
         .shell-hero .gold{font-size:60px}
         .shell-hero .desc{font-size:16px}
         .shell-hero-content{text-align:center;padding:60px 24px}
+        .md\:block{display:block}
+        .md\:hidden{display:none}
+        .md\:flex{display:flex}
+      }
+      @media(min-width:1024px){
+        .main_container{padding-left:1.75rem;padding-right:1.75rem}
+        .lg\:flex{display:flex}
+        .lg\:hidden{display:none}
       }
     </style>
   </head>
