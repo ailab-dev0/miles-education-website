@@ -173,6 +173,7 @@ function DownloadApp() {
             width={32}
             height={32}
             className="shrink-0"
+            loading="lazy"
           />
           <div>
             <p className="text-[10px] leading-3 text-white font-medium">
@@ -193,6 +194,7 @@ function DownloadApp() {
             width={32}
             height={32}
             className="shrink-0"
+            loading="lazy"
           />
           <div>
             <p className="text-[10px] leading-3 text-white font-medium">
@@ -209,6 +211,7 @@ function DownloadApp() {
           width={100}
           height={100}
           className="min-w-[100px] min-h-[100px] inline-block"
+          loading="lazy"
         />
         <p className="pt-1 text-xs text-[#fff]">Scan to download</p>
       </div>
@@ -232,6 +235,8 @@ function HomeBannerNew() {
         <img
           src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp"
           alt="Home Page Banner Desktop Background"
+          width={1280}
+          height={580}
           className="absolute inset-0 w-full h-full object-fill object-center z-0"
           sizes="100vw"
           style={{ objectPosition: "center center" }}
@@ -244,6 +249,8 @@ function HomeBannerNew() {
         <img
           src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp"
           alt="Home Page Banner Mobile Background"
+          width={420}
+          height={740}
           className="absolute inset-0 w-full h-full object-fill z-0"
           fetchPriority="high"
           onLoad={() => setImageLoaded(true)}
@@ -327,6 +334,8 @@ function HomeCaira() {
           <img
             src="https://ik.imagekit.io/mileseducation/miles_website/home/new/home-desk-caira.webp"
             alt="CAIRA Banner Desktop Background"
+            width={1280}
+            height={580}
             className="absolute inset-0 w-full h-full object-cover z-0 "
             fetchPriority="high"
           />
@@ -336,6 +345,8 @@ function HomeCaira() {
           <img
             src="https://ik.imagekit.io/mileseducation/miles_website/home/new/ai_ready_bg.webp"
             alt="CAIRA Banner Mobile Background"
+            width={420}
+            height={740}
             className="absolute inset-0 w-full h-full object-cover z-0"
             fetchPriority="high"
           />
@@ -356,6 +367,7 @@ function HomeCaira() {
                       width={16}
                       height={16}
                       className="w-4 h-4 object-contain"
+                      loading="lazy"
                     />
                     <span className="text-black text-sm md:text-base font-medium">
                       AI is no longer optional in accounting
@@ -399,6 +411,7 @@ function HomeCaira() {
                       width={16}
                       height={16}
                       className="w-4 h-4 object-contain"
+                      loading="lazy"
                     />
                     <span className="text-black text-sm font-medium">
                       AI is no longer optional in accounting
@@ -427,6 +440,7 @@ function HomeCaira() {
                     width={402}
                     height={178}
                     className="pt-0 object-contain w-[402px] 2xl:w-[600px]"
+                    loading="lazy"
                   />
                 </div>
 
@@ -438,6 +452,7 @@ function HomeCaira() {
                     width={300}
                     height={130}
                     className="pt-6 pb-0 mb-0 w-full h-auto object-contain max-w-[302px] mx-auto"
+                    loading="lazy"
                   />
                 </div>
 
@@ -448,6 +463,7 @@ function HomeCaira() {
                     width={332}
                     height={299}
                     className="pt-4 pb-0 mb-0 w-full h-auto object-contain mx-auto relative left-[11px]"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -630,6 +646,7 @@ function HomeFoundation() {
                     alt="Question Mark Icon"
                     width={78}
                     height={78}
+                    loading="lazy"
                   />
                 </div>
                 <h3 className="text-[28px] md:text-[28px] font-semibold text-[#FFBA08] leading-[1.2]">
@@ -673,6 +690,7 @@ function HomeFoundation() {
                   alt="Question Mark Icon"
                   width={78}
                   height={78}
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-[28px] font-semibold text-[#FFBA08] leading-[1.2] md:text-left text-center">
@@ -793,6 +811,7 @@ function HomeIndiaCareers() {
                   width={logo.width}
                   height={logo.height}
                   className="object-contain h-full w-auto"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -859,7 +878,10 @@ function HomeUsPathway() {
             <img
               src="https://ik.imagekit.io/mileseducation/miles_website/home/new/runway.webp"
               alt="Airplane Icon"
+              width={64}
+              height={64}
               className="absolute inset-0 w-full h-full object-contain"
+              loading="lazy"
             />
           </div>
 
@@ -894,6 +916,7 @@ function HomeUsPathway() {
                 className="rounded-2xl hidden  md:block"
                 height={400}
                 width={964}
+                loading="lazy"
               />
             </div>
             {/* Pillar 1 */}
@@ -953,6 +976,7 @@ function HomeUsPathway() {
                 height={400}
                 width={800}
                 className="object-cover"
+                loading="lazy"
               />
             </div>
 
@@ -1067,6 +1091,7 @@ function UniversityIntegration() {
           max-h-[85px] md:max-h-[90px]
           max-w-[110px] md:max-w-[160px]
         "
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -1366,6 +1391,7 @@ function MilesFoundationSection() {
                   width={item.img.desktop.w}
                   height={item.img.desktop.h}
                   className="object-contain"
+                  loading="lazy"
                 />
               </div>
 
@@ -1417,6 +1443,7 @@ bg-[linear-gradient(90deg,#3399FF_0.07%,#061A2F_62.39%)] bg-clip-text text-trans
               width={300}
               height={420}
               className="w-[168px] md:w-[317px] h-auto object-contain"
+              loading="lazy"
             />
           </div>
           <div className="col-span-2 lg:col-span-1 flex flex-col items-center justify-center gap-6 lg:py-16 pb-8">
@@ -1472,7 +1499,7 @@ bg-[linear-gradient(90deg,#3399FF_0.07%,#061A2F_62.39%)] bg-clip-text text-trans
    ================================================================ */
 export default function Home() {
   return (
-    <main className="bg-white w-full">
+    <main className="bg-white w-full pt-[96px] md:pt-[96px]">
       <Nav activePage="/" />
 
       <HomeBannerNew />
