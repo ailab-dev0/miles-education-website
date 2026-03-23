@@ -12,8 +12,9 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
     <!-- Preload LCP hero images — must be discoverable in initial HTML -->
-    <!-- Desktop hero preloaded; mobile hero lazy-loaded so text is LCP -->
-    <link rel="preload" as="image" href="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp" media="(min-width: 769px)" fetchpriority="high" />
+    <!-- Preload LCP hero images -->
+    <link rel="preload" as="image" href="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp?tr=f-webp" media="(max-width: 768px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp?tr=f-webp" media="(min-width: 769px)" fetchpriority="high" />
 
     <!-- Fonts loaded after first paint via JS to avoid render blocking -->
     <noscript><link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>

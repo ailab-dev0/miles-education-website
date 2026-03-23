@@ -233,7 +233,7 @@ function HomeBannerNew() {
       {/* Desktop Background */}
       <div className="hidden md:block absolute inset-0 top-0 overflow-hidden">
         <img
-          src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp"
+          src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp?tr=f-webp"
           alt="Home Page Banner Desktop Background"
           width={1280}
           height={580}
@@ -244,15 +244,15 @@ function HomeBannerNew() {
           onLoad={() => setImageLoaded(true)}
         />
       </div>
-      {/* Mobile Background — loaded lazily so text is LCP, not image */}
+      {/* Mobile Background — LCP element, must load eagerly */}
       <div className="md:hidden absolute inset-0 top-0">
         <img
-          src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp"
+          src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp?tr=f-webp"
           alt="Home Page Banner Mobile Background"
           width={420}
           height={740}
           className="absolute inset-0 w-full h-full object-fill z-0"
-          loading="lazy"
+          fetchPriority="high"
           onLoad={() => setImageLoaded(true)}
         />
       </div>
@@ -306,7 +306,7 @@ function HomeBannerNew() {
           </p>
           <div>
             <button
-              className=" text-black px-4 py-2.5 rounded-full bg-[#FFBA08] font-bold shadow-lg text-base md:text-base"
+              className="bg-[#FFBA08] text-black px-4 py-2.5 rounded-full font-bold shadow-lg text-base"
             >
               Become an AI-Ready Accountant
             </button>
@@ -921,7 +921,7 @@ function HomeUsPathway() {
             </div>
             {/* Pillar 1 */}
             <div className=" flex flex-row p-6 md:p-8 text-left gap-2 relative z-10">
-              <div className="text-2xl md:text-[40px] font-bold bg-[linear-gradient(146deg,#39F_14.91%,#FFBA08_83.78%)] bg-clip-text text-transparent">
+              <div className="text-2xl md:text-[40px] font-bold bg-[linear-gradient(146deg,#3399FF_14.91%,#FFBA08_83.78%)] bg-clip-text text-transparent">
                 1.
               </div>
               <h3 className="text-xs md:text-base md:leading-[1.2] font-normal text-black">
@@ -935,7 +935,7 @@ function HomeUsPathway() {
 
             {/* Pillar 2 */}
             <div className=" flex flex-row p-6 md:p-8 text-left gap-2 relative z-10">
-              <div className="text-2xl md:text-[40px] font-bold bg-[linear-gradient(146deg,#39F_14.91%,#FFBA08_83.78%)] bg-clip-text text-transparent">
+              <div className="text-2xl md:text-[40px] font-bold bg-[linear-gradient(146deg,#3399FF_14.91%,#FFBA08_83.78%)] bg-clip-text text-transparent">
                 2.
               </div>
               <h3 className="text-xs md:text-base md:leading-[1.2] font-normal text-black">
@@ -946,7 +946,7 @@ function HomeUsPathway() {
             </div>
 
             <div className=" flex flex-row p-6 md:p-8 text-left gap-2 relative z-10">
-              <div className="text-2xl md:text-[40px] font-bold bg-[linear-gradient(146deg,#39F_14.91%,#FFBA08_83.78%)] bg-clip-text text-transparent">
+              <div className="text-2xl md:text-[40px] font-bold bg-[linear-gradient(146deg,#3399FF_14.91%,#FFBA08_83.78%)] bg-clip-text text-transparent">
                 3.
               </div>
               <h3 className="text-xs md:text-base md:leading-[1.2] font-normal text-black">
@@ -982,7 +982,7 @@ function HomeUsPathway() {
 
             {/* Pillar 1 - Top position */}
             <div className="flex flex-row text-left gap-2 absolute z-10 self-start pt-4 pl-2">
-              <div className="text-2xl font-bold bg-[linear-gradient(146deg,#39F_14.91%,#FFBA08_83.78%)] bg-clip-text text-transparent">
+              <div className="text-2xl font-bold bg-[linear-gradient(146deg,#3399FF_14.91%,#FFBA08_83.78%)] bg-clip-text text-transparent">
                 1.
               </div>
               <h3 className="text-xs font-normal text-black leading-tight">
@@ -998,7 +998,7 @@ function HomeUsPathway() {
 
             {/* Pillar 2 - Middle-bottom position */}
             <div className="flex flex-row text-left gap-2 absolute z-10 self-center pt-8">
-              <div className="text-2xl font-bold bg-[linear-gradient(146deg,#39F_14.91%,#FFBA08_83.78%)] bg-clip-text text-transparent">
+              <div className="text-2xl font-bold bg-[linear-gradient(146deg,#3399FF_14.91%,#FFBA08_83.78%)] bg-clip-text text-transparent">
                 2.
               </div>
               <h3 className="text-xs font-normal text-black leading-tight">
@@ -1011,7 +1011,7 @@ function HomeUsPathway() {
 
             {/* Pillar 3 - Top-right position */}
             <div className="flex flex-row text-left gap-2 absolute z-10 self-end pt-2 pr-4">
-              <div className="text-2xl font-bold bg-[linear-gradient(146deg,#39F_14.91%,#FFBA08_83.78%)] bg-clip-text text-transparent">
+              <div className="text-2xl font-bold bg-[linear-gradient(146deg,#3399FF_14.91%,#FFBA08_83.78%)] bg-clip-text text-transparent">
                 3.
               </div>
               <h3 className="text-xs font-normal text-black leading-tight">
