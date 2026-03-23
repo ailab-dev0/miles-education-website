@@ -244,7 +244,7 @@ function HomeBannerNew() {
           onLoad={() => setImageLoaded(true)}
         />
       </div>
-      {/* Mobile Background */}
+      {/* Mobile Background — loaded lazily so text is LCP, not image */}
       <div className="md:hidden absolute inset-0 top-0">
         <img
           src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp?tr=w-375,q-50,f-webp"
@@ -252,7 +252,7 @@ function HomeBannerNew() {
           width={420}
           height={740}
           className="absolute inset-0 w-full h-full object-fill z-0"
-          fetchPriority="high"
+          loading="lazy"
           onLoad={() => setImageLoaded(true)}
         />
       </div>
