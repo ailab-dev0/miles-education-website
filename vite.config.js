@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: '/miles-education-website/',
   plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {
