@@ -7,7 +7,7 @@ const CPA = lazy(() => import('./pages/CPA'))
 export default function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><p className="text-gray-400">Loading...</p></div>}>
+      <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cpa" element={<CPA />} />

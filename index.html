@@ -6,16 +6,16 @@
     <title>Miles Education | Making Accountants AI-Ready. Globally.</title>
     <meta name="description" content="From CPA and CMA to AI-ready professionals with global careers. Miles builds future-ready accountants for India, the United States, and the world." />
 
-    <!-- Preconnect to critical origins (before any other resource hints) -->
+    <!-- Preconnect to critical origins -->
     <link rel="preconnect" href="https://ik.imagekit.io" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Preload critical hero images for LCP -->
+    <!-- Preload hero images for LCP -->
     <link rel="preload" as="image" href="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp" media="(min-width: 769px)" fetchpriority="high" />
     <link rel="preload" as="image" href="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp" media="(max-width: 768px)" fetchpriority="high" />
 
-    <!-- Preload font CSS (render-blocking reduction) -->
+    <!-- Non-blocking font loading -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
@@ -30,15 +30,45 @@
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#191919" />
 
-    <!-- Critical inline CSS for above-the-fold (prevents FOUC, improves FCP) -->
+    <!-- Critical inline styles -->
     <style>
-      body{margin:0;font-family:'Work Sans',system-ui,sans-serif;background:#fff;overflow-x:hidden}
+      *,*::before,*::after{box-sizing:border-box}
+      body{margin:0;font-family:'Work Sans',system-ui,sans-serif;background:#fff;overflow-x:hidden;color:#333}
       #root{min-height:100vh}
       .visit_txt{background:linear-gradient(92deg,#39f 6.8%,#ffba08 99.51%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:600;line-height:94%;overflow:visible}
+      /* Skeleton shell — removed by React on mount */
+      .shell-ticker{background:#061A2F;height:24px;overflow:hidden}
+      .shell-ticker p{color:#fff;font-size:12px;text-align:center;line-height:24px;margin:0;white-space:nowrap}
+      .shell-nav{background:#191919;height:56px}
+      .shell-hero{position:relative;min-height:520px;overflow:hidden}
+      .shell-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+      .shell-hero-content{position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:24px 16px;text-align:center}
+      .shell-hero h1{color:#061A2F;font-size:24px;font-weight:600;line-height:1.2;letter-spacing:-1.44px;margin:0}
+      .shell-hero .gold{display:block;font-size:24px;font-weight:600;background:linear-gradient(88deg,#39F 73%,#FFB801 91%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+      @media(min-width:768px){
+        .shell-hero h1{font-size:44px}
+        .shell-hero .gold{font-size:36px}
+        .shell-hero-content{text-align:left;padding:40px 24px}
+      }
     </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static shell for instant FCP/LCP — React replaces this on mount -->
+      <div class="shell-ticker"><p>Become an AI-Ready CPA or CMA | Free webinar with Varun Jain | Register Now</p></div>
+      <div class="shell-nav"></div>
+      <div class="shell-hero">
+        <picture>
+          <source media="(min-width: 769px)" srcset="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp" />
+          <source media="(max-width: 768px)" srcset="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-mob.webp" />
+          <img class="shell-hero-bg" src="https://ik.imagekit.io/mileseducation/miles_website/home/new/bg-hero-desk.webp" alt="" width="1280" height="580" fetchpriority="high" />
+        </picture>
+        <div class="shell-hero-content">
+          <h1>Making Accountants</h1>
+          <span class="gold">AI-Ready. Globally.</span>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
